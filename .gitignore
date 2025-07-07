@@ -1,0 +1,38 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# Rust tooling
+Cargo.lock
+/.rustc_info.json
+
+# Python virtual environment
+venv/
+.pyenv/
+env/
+ENV/
+.venv/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# gRPC generated Python files
+*_pb2.py
+*_pb2_grpc.py
+
+# IDE/editor config
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Misc
+.CACHEDIR.TAG

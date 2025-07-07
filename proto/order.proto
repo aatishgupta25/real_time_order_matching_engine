@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package order;
+
+service OrderMatching {
+  rpc SubmitOrder (OrderRequest) returns (SubmitResponse);
+}
+
+message OrderRequest {
+  string user_id = 1;
+  string symbol = 2;
+  string side = 3;        // "buy" or "sell"
+  string order_type = 4;  // "limit" or "market"
+  uint64 quantity = 5;
+  uint64 price = 6;       // optional; ignored for market
+}
+
+message Trade {
+  uint64 price = 1;
+  uint64 quantity = 2;
+  string buyer = 3;
+  string seller = 4;
+  string timestamp = 5;
+}
+
+message SubmitResponse {
+  repeated Trade trades = 1;
+}
