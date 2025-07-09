@@ -76,7 +76,7 @@ pub async fn serve(book: Arc<Mutex<OrderBook>>, redis: RedisWriter) -> Result<()
     let addr = "[::1]:50051".parse()?;
     let service = OrderService { book, redis };
 
-    println!("🚀 gRPC server running on {}", addr);
+    println!("gRPC server running on {}", addr);
 
     tonic::transport::Server::builder()
         .add_service(OrderMatchingServer::new(service))
