@@ -14,7 +14,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/real_time_order_matching_engine.git
+git clone https://github.com/aatishgupta25/real_time_order_matching_engine.git
 cd real_time_order_matching_engine
 ```
 
