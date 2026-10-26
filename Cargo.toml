@@ -2,6 +2,7 @@
 name = "real_time_engine"
 version = "0.1.0"
 edition = "2021"
+default-run = "real_time_engine"
 
 [dependencies]
 tonic = { version = "0.11", features = ["transport"] }
@@ -15,3 +16,7 @@ chrono = { version = "0.4", features = ["serde"] }
 
 [build-dependencies]
 tonic-build = "0.11"
+
+# Retain enough symbols to attribute CPU samples to matching functions in flamegraphs.
+[profile.release]
+debug = 1
